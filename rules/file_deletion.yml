@@ -1,0 +1,19 @@
+title: File Deletion Activity
+id: ffffffff-ffff-4fff-8fff-ffffffffffff
+status: experimental
+description: Detects Sysmon file deletion events.
+references:
+  - https://attack.mitre.org/techniques/T1070/004/
+tags:
+  - attack.defense_evasion
+  - attack.t1070.004
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 23
+  condition: selection
+falsepositives:
+  - Normal temporary file cleanup
+level: medium

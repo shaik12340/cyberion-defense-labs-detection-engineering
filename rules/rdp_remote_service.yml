@@ -1,0 +1,18 @@
+title: RDP Remote Connection
+id: 99999999-9999-4999-8999-999999999999
+status: experimental
+description: Detects Remote Desktop authentication events.
+references:
+  - https://attack.mitre.org/techniques/T1021/001/
+tags:
+  - attack.lateral_movement
+  - attack.t1021.001
+logsource:
+  product: windows
+detection:
+  selection:
+    EventID: 1149
+  condition: selection
+falsepositives:
+  - Legitimate remote administration
+level: medium

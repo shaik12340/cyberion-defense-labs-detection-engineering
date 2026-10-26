@@ -1,0 +1,23 @@
+title: Suspicious Web Protocol Activity
+id: dddddddd-dddd-4ddd-8ddd-dddddddddddd
+status: experimental
+description: Detects process execution containing HTTP or HTTPS URLs.
+references:
+  - https://attack.mitre.org/techniques/T1071/001/
+tags:
+  - attack.command_and_control
+  - attack.t1071.001
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection:
+    EventID: 1
+    CommandLine|contains:
+      - 'http://'
+      - 'https://'
+  condition: selection
+falsepositives:
+  - Legitimate administrative scripts
+  - Software updates
+level: low

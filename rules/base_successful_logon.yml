@@ -1,0 +1,19 @@
+title: Successful Windows Logon
+id: 20202020-2020-4202-8202-202020202020
+status: experimental
+description: Base event rule for successful Windows authentication.
+references:
+  - https://attack.mitre.org/techniques/T1078/
+tags:
+  - attack.defense_evasion
+  - attack.t1078
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4624
+  condition: selection
+falsepositives:
+  - Normal user authentication
+level: low

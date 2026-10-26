@@ -1,0 +1,22 @@
+title: System Information Discovery
+id: bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb
+status: experimental
+description: Detects system information discovery commands.
+references:
+  - https://attack.mitre.org/techniques/T1082/
+tags:
+  - attack.discovery
+  - attack.t1082
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection:
+    EventID: 1
+    Image|endswith:
+      - '\systeminfo.exe'
+      - '\hostname.exe'
+  condition: selection
+falsepositives:
+  - Administrative inventory scripts
+level: low

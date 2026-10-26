@@ -1,0 +1,31 @@
+title: PowerShell Followed By LSASS Access
+id: 50505050-5050-4505-8505-505050505050
+status: experimental
+description: Correlates PowerShell execution with subsequent LSASS memory access.
+references:
+- https://attack.mitre.org/techniques/T1059/001/
+- https://attack.mitre.org/techniques/T1003/001/
+tags:
+- attack.execution
+- attack.t1059.001
+- attack.credential_access
+- attack.t1003.001
+correlation:
+  type: temporal_ordered
+  rules:
+  - proc_powershell_obfuscated
+  - lsass_memory_access
+  group-by:
+  - Computer
+  timespan: 10m
+level: high
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection:
+    EventID: 1
+  condition: selection
+falsepositives:
+- Legitimate PowerShell administration followed by security or diagnostic activity
+- Authorized endpoint administration

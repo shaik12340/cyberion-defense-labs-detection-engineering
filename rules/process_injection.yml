@@ -1,0 +1,19 @@
+title: Process Injection
+id: 44444444-4444-4444-8444-444444444444
+status: experimental
+description: Detects Sysmon process injection events.
+references:
+  - https://attack.mitre.org/techniques/T1055/
+tags:
+  - attack.defense_evasion
+  - attack.t1055
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 8
+  condition: selection
+falsepositives:
+  - Security and monitoring software
+level: high

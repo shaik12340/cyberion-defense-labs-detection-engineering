@@ -1,0 +1,432 @@
+{
+  "name": "Cyberion Detection Engineering - Coverage",
+  "versions": {
+    "attack": "17",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Project-defined detection coverage: 100 covered, 50 partially covered, 0 not covered. Scores are not official ATT&CK ratings.",
+  "filters": {
+    "platforms": [
+      "Windows"
+    ]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1059.001",
+      "score": 100,
+      "comment": "Covered. Rule: proc_powershell_obfuscated.yml. Evidence: Sysmon Event ID 1; PowerShell telemetry",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "execution"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1059.003",
+      "score": 100,
+      "comment": "Covered. Rule: proc_cmd_shell.yml. Evidence: Sysmon Event ID 1",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "execution"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1003.001",
+      "score": 100,
+      "comment": "Covered. Rule: lsass_memory_access.yml. Evidence: Sysmon Event ID 10",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "credential-access"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1110.001",
+      "score": 50,
+      "comment": "Partially Covered. Rule: base_failed_logon.yml. Evidence: Security Event ID 4625; only one failed-logon event observed",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Partially Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "credential-access"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1078",
+      "score": 100,
+      "comment": "Covered. Rule: valid_accounts_admin_logon.yml. Evidence: Security Event ID 4624",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1547.001",
+      "score": 100,
+      "comment": "Covered. Rule: registry_run_keys.yml. Evidence: Sysmon Event ID 12/13",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "persistence"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1543.003",
+      "score": 100,
+      "comment": "Covered. Rule: service_creation.yml. Evidence: Service creation telemetry; validate exact event source",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "persistence"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1053.005",
+      "score": 100,
+      "comment": "Covered. Rule: scheduled_task_creation.yml. Evidence: Security Event ID 4698/4702",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "persistence"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1087",
+      "score": 100,
+      "comment": "Covered. Rule: account_discovery.yml. Evidence: Sysmon Event ID 1",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "discovery"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1082",
+      "score": 100,
+      "comment": "Covered. Rule: system_information_discovery.yml. Evidence: Sysmon Event ID 1",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "discovery"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1021.001",
+      "score": 100,
+      "comment": "Covered. Rule: rdp_remote_service.yml. Evidence: Terminal Services Event ID 1149",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "lateral-movement"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1021.002",
+      "score": 100,
+      "comment": "Covered. Rule: smb_admin_share.yml. Evidence: Security Event ID 5145",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "lateral-movement"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1055",
+      "score": 100,
+      "comment": "Covered. Rule: process_injection.yml. Evidence: Sysmon Event ID 8",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1112",
+      "score": 100,
+      "comment": "Covered. Rule: modify_registry_portproxy.yml. Evidence: Sysmon Event ID 12/13",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1027",
+      "score": 50,
+      "comment": "Partially Covered. Rule: No dedicated rule. Evidence: Supporting telemetry; no dedicated validated rule",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Partially Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1070.004",
+      "score": 100,
+      "comment": "Covered. Rule: file_deletion.yml. Evidence: Sysmon Event ID 23",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1070.001",
+      "score": 50,
+      "comment": "Partially Covered. Rule: No dedicated rule. Evidence: Event ID 1102 discussed in mapping; dedicated rule not listed",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Partially Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1105",
+      "score": 100,
+      "comment": "Covered. Rule: bits_ingress_tool_transfer.yml. Evidence: Sysmon/process telemetry",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "command-and-control"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1071.001",
+      "score": 100,
+      "comment": "Covered. Rule: web_protocol_activity.yml. Evidence: Sysmon Event ID 1",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "command-and-control"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1005",
+      "score": 50,
+      "comment": "Partially Covered. Rule: No dedicated rule. Evidence: Process telemetry exists; malicious collection intent not established",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Partially Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "collection"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1048",
+      "score": 0,
+      "comment": "Not Covered. Rule: No dedicated rule. Evidence: Insufficient confirmed evidence",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Not Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "exfiltration"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1562.001",
+      "score": 0,
+      "comment": "Not Covered. Rule: No dedicated rule. Evidence: Insufficient confirmed evidence",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Not Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1486",
+      "score": 0,
+      "comment": "Not Covered. Rule: No dedicated rule. Evidence: Insufficient confirmed ransomware-encryption evidence",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Not Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "impact"
+        }
+      ]
+    },
+    {
+      "techniqueID": "T1490",
+      "score": 0,
+      "comment": "Not Covered. Rule: No dedicated rule. Evidence: Insufficient confirmed evidence",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Coverage",
+          "value": "Not Covered"
+        },
+        {
+          "name": "Tactic",
+          "value": "impact"
+        }
+      ]
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#d73027",
+      "#fee08b",
+      "#1a9850"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Not Covered",
+      "color": "#d73027"
+    },
+    {
+      "label": "Partially Covered",
+      "color": "#fee08b"
+    },
+    {
+      "label": "Covered",
+      "color": "#1a9850"
+    }
+  ]
+}

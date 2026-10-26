@@ -1,0 +1,30 @@
+title: Failed Logon Burst
+id: 30303030-3030-4303-8303-303030303030
+status: experimental
+description: Correlation rule for multiple failed authentication attempts against
+  the same account within a short time window.
+references:
+- https://attack.mitre.org/techniques/T1110/001/
+tags:
+- attack.credential_access
+- attack.t1110.001
+correlation:
+  type: event_count
+  rules:
+  - base_failed_logon
+  group-by:
+  - TargetUserName
+  timespan: 5m
+  condition:
+    gte: 5
+level: medium
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4625
+  condition: selection
+falsepositives:
+- Legitimate authentication failures caused by incorrect passwords
+- User account lockout or password reset activity

@@ -1,0 +1,258 @@
+{
+  "project": "Cyberion Defense Labs Detection Engineering & Threat Hunting",
+  "dataset": "EVTX-ATTACK-SAMPLES",
+  "phase": 6,
+  "classification_note": "Coverage reflects the documented Phase 3 assessment; revalidate discrepancies during final QA.",
+  "summary": {
+    "techniques_assessed": 24,
+    "covered": 16,
+    "partially_covered": 4,
+    "not_covered": 4
+  },
+  "techniques": [
+    {
+      "technique_id": "T1059.001",
+      "name": "PowerShell",
+      "tactic": "execution",
+      "coverage": "Covered",
+      "navigator_score": 100,
+      "sigma_rule": "proc_powershell_obfuscated.yml",
+      "telemetry_or_evidence": "Sysmon Event ID 1; PowerShell telemetry"
+    },
+    {
+      "technique_id": "T1059.003",
+      "name": "Windows Command Shell",
+      "tactic": "execution",
+      "coverage": "Covered",
+      "navigator_score": 100,
+      "sigma_rule": "proc_cmd_shell.yml",
+      "telemetry_or_evidence": "Sysmon Event ID 1"
+    },
+    {
+      "technique_id": "T1003.001",
+      "name": "LSASS Memory",
+      "tactic": "credential-access",
+      "coverage": "Covered",
+      "navigator_score": 100,
+      "sigma_rule": "lsass_memory_access.yml",
+      "telemetry_or_evidence": "Sysmon Event ID 10"
+    },
+    {
+      "technique_id": "T1110.001",
+      "name": "Password Guessing",
+      "tactic": "credential-access",
+      "coverage": "Partially Covered",
+      "navigator_score": 50,
+      "sigma_rule": "base_failed_logon.yml",
+      "telemetry_or_evidence": "Security Event ID 4625; only one failed-logon event observed"
+    },
+    {
+      "technique_id": "T1078",
+      "name": "Valid Accounts",
+      "tactic": "defense-evasion",
+      "coverage": "Covered",
+      "navigator_score": 100,
+      "sigma_rule": "valid_accounts_admin_logon.yml",
+      "telemetry_or_evidence": "Security Event ID 4624"
+    },
+    {
+      "technique_id": "T1547.001",
+      "name": "Registry Run Keys / Startup Folder",
+      "tactic": "persistence",
+      "coverage": "Covered",
+      "navigator_score": 100,
+      "sigma_rule": "registry_run_keys.yml",
+      "telemetry_or_evidence": "Sysmon Event ID 12/13"
+    },
+    {
+      "technique_id": "T1543.003",
+      "name": "Windows Service",
+      "tactic": "persistence",
+      "coverage": "Covered",
+      "navigator_score": 100,
+      "sigma_rule": "service_creation.yml",
+      "telemetry_or_evidence": "Service creation telemetry; validate exact event source"
+    },
+    {
+      "technique_id": "T1053.005",
+      "name": "Scheduled Task",
+      "tactic": "persistence",
+      "coverage": "Covered",
+      "navigator_score": 100,
+      "sigma_rule": "scheduled_task_creation.yml",
+      "telemetry_or_evidence": "Security Event ID 4698/4702"
+    },
+    {
+      "technique_id": "T1087",
+      "name": "Account Discovery",
+      "tactic": "discovery",
+      "coverage": "Covered",
+      "navigator_score": 100,
+      "sigma_rule": "account_discovery.yml",
+      "telemetry_or_evidence": "Sysmon Event ID 1"
+    },
+    {
+      "technique_id": "T1082",
+      "name": "System Information Discovery",
+      "tactic": "discovery",
+      "coverage": "Covered",
+      "navigator_score": 100,
+      "sigma_rule": "system_information_discovery.yml",
+      "telemetry_or_evidence": "Sysmon Event ID 1"
+    },
+    {
+      "technique_id": "T1021.001",
+      "name": "Remote Services: RDP",
+      "tactic": "lateral-movement",
+      "coverage": "Covered",
+      "navigator_score": 100,
+      "sigma_rule": "rdp_remote_service.yml",
+      "telemetry_or_evidence": "Terminal Services Event ID 1149"
+    },
+    {
+      "technique_id": "T1021.002",
+      "name": "SMB/Windows Admin Shares",
+      "tactic": "lateral-movement",
+      "coverage": "Covered",
+      "navigator_score": 100,
+      "sigma_rule": "smb_admin_share.yml",
+      "telemetry_or_evidence": "Security Event ID 5145"
+    },
+    {
+      "technique_id": "T1055",
+      "name": "Process Injection",
+      "tactic": "defense-evasion",
+      "coverage": "Covered",
+      "navigator_score": 100,
+      "sigma_rule": "process_injection.yml",
+      "telemetry_or_evidence": "Sysmon Event ID 8"
+    },
+    {
+      "technique_id": "T1112",
+      "name": "Modify Registry",
+      "tactic": "defense-evasion",
+      "coverage": "Covered",
+      "navigator_score": 100,
+      "sigma_rule": "modify_registry_portproxy.yml",
+      "telemetry_or_evidence": "Sysmon Event ID 12/13"
+    },
+    {
+      "technique_id": "T1027",
+      "name": "Obfuscated/Compressed Files or Information",
+      "tactic": "defense-evasion",
+      "coverage": "Partially Covered",
+      "navigator_score": 50,
+      "sigma_rule": null,
+      "telemetry_or_evidence": "Supporting telemetry; no dedicated validated rule"
+    },
+    {
+      "technique_id": "T1070.004",
+      "name": "File Deletion",
+      "tactic": "defense-evasion",
+      "coverage": "Covered",
+      "navigator_score": 100,
+      "sigma_rule": "file_deletion.yml",
+      "telemetry_or_evidence": "Sysmon Event ID 23"
+    },
+    {
+      "technique_id": "T1070.001",
+      "name": "Clear Windows Event Logs",
+      "tactic": "defense-evasion",
+      "coverage": "Partially Covered",
+      "navigator_score": 50,
+      "sigma_rule": null,
+      "telemetry_or_evidence": "Event ID 1102 discussed in mapping; dedicated rule not listed"
+    },
+    {
+      "technique_id": "T1105",
+      "name": "Ingress Tool Transfer",
+      "tactic": "command-and-control",
+      "coverage": "Covered",
+      "navigator_score": 100,
+      "sigma_rule": "bits_ingress_tool_transfer.yml",
+      "telemetry_or_evidence": "Sysmon/process telemetry"
+    },
+    {
+      "technique_id": "T1071.001",
+      "name": "Web Protocols",
+      "tactic": "command-and-control",
+      "coverage": "Covered",
+      "navigator_score": 100,
+      "sigma_rule": "web_protocol_activity.yml",
+      "telemetry_or_evidence": "Sysmon Event ID 1"
+    },
+    {
+      "technique_id": "T1005",
+      "name": "Data from Local System",
+      "tactic": "collection",
+      "coverage": "Partially Covered",
+      "navigator_score": 50,
+      "sigma_rule": null,
+      "telemetry_or_evidence": "Process telemetry exists; malicious collection intent not established"
+    },
+    {
+      "technique_id": "T1048",
+      "name": "Exfiltration Over Alternative Protocol",
+      "tactic": "exfiltration",
+      "coverage": "Not Covered",
+      "navigator_score": 0,
+      "sigma_rule": null,
+      "telemetry_or_evidence": "Insufficient confirmed evidence"
+    },
+    {
+      "technique_id": "T1562.001",
+      "name": "Impair Defenses: Disable or Modify Tools",
+      "tactic": "defense-evasion",
+      "coverage": "Not Covered",
+      "navigator_score": 0,
+      "sigma_rule": null,
+      "telemetry_or_evidence": "Insufficient confirmed evidence"
+    },
+    {
+      "technique_id": "T1486",
+      "name": "Data Encrypted for Impact",
+      "tactic": "impact",
+      "coverage": "Not Covered",
+      "navigator_score": 0,
+      "sigma_rule": null,
+      "telemetry_or_evidence": "Insufficient confirmed ransomware-encryption evidence"
+    },
+    {
+      "technique_id": "T1490",
+      "name": "Inhibit System Recovery",
+      "tactic": "impact",
+      "coverage": "Not Covered",
+      "navigator_score": 0,
+      "sigma_rule": null,
+      "telemetry_or_evidence": "Insufficient confirmed evidence"
+    }
+  ],
+  "correlations": [
+    {
+      "name": "Failed Logon Burst",
+      "techniques": [
+        "T1110.001"
+      ],
+      "status": "Implemented but not demonstrated",
+      "evidence": "One Event ID 4625 event was observed in the documented Phase 5 test."
+    },
+    {
+      "name": "Failed Logons Followed By Successful Logon",
+      "techniques": [
+        "T1110.001",
+        "T1078"
+      ],
+      "status": "Demonstrated according to phase5_final_evidence.md",
+      "evidence": "The newer Phase 5 final evidence report records two demonstrated sequences. Older Phase 3 documentation conflicts and requires reconciliation."
+    },
+    {
+      "name": "PowerShell Followed By LSASS Access",
+      "techniques": [
+        "T1059.001",
+        "T1003.001"
+      ],
+      "status": "Validated",
+      "evidence": "Three same-host sequences within a 10-minute window, according to Phase 5 final evidence."
+    }
+  ]
+}

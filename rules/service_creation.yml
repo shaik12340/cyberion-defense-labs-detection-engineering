@@ -1,0 +1,18 @@
+title: Windows Service Creation
+id: 66666666-6666-4666-8666-666666666666
+status: experimental
+description: Detects creation of Windows services.
+references:
+  - https://attack.mitre.org/techniques/T1543/003/
+tags:
+  - attack.persistence
+  - attack.t1543.003
+logsource:
+  product: windows
+detection:
+  selection:
+    EventID: 7045
+  condition: selection
+falsepositives:
+  - Legitimate software installation
+level: high

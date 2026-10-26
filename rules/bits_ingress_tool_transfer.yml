@@ -1,0 +1,22 @@
+title: BITS Ingress Tool Transfer
+id: cccccccc-cccc-4ccc-8ccc-cccccccccccc
+status: experimental
+description: Detects BITS-based file transfer activity.
+references:
+  - https://attack.mitre.org/techniques/T1105/
+tags:
+  - attack.command_and_control
+  - attack.t1105
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection:
+    EventID: 1
+    CommandLine|contains:
+      - 'Start-BitsTransfer'
+      - 'bitsadmin'
+  condition: selection
+falsepositives:
+  - Legitimate software deployment
+level: medium

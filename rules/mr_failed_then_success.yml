@@ -1,0 +1,33 @@
+title: Failed Logons Followed By Successful Logon
+id: 40404040-4040-4404-8404-404040404040
+status: experimental
+description: Correlates failed authentication activity followed by a successful authentication
+  for the same account.
+references:
+- https://attack.mitre.org/techniques/T1110/001/
+- https://attack.mitre.org/techniques/T1078/
+tags:
+- attack.credential_access
+- attack.t1110.001
+- attack.t1078
+correlation:
+  type: temporal_ordered
+  rules:
+  - base_failed_logon
+  - base_successful_logon
+  group-by:
+  - TargetUserName
+  timespan: 15m
+level: high
+logsource:
+  product: windows
+  service: security
+detection:
+  selection_failed:
+    EventID: 4625
+  selection_success:
+    EventID: 4624
+  condition: selection_failed or selection_success
+falsepositives:
+- Users entering an incorrect password before successfully authenticating
+- Normal authentication retries

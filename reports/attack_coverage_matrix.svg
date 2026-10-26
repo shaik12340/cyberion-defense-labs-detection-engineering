@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1150" viewBox="0 0 1700 1150">
+<rect width="100%" height="100%" fill="#F5F7FA"/>
+<rect width="100%" height="145" fill="#152238"/>
+<text x="36" y="48" font-family="Arial,sans-serif" font-size="27" font-weight="bold" fill="#FFFFFF">Cyberion Defense Labs</text>
+<text x="36" y="84" font-family="Arial,sans-serif" font-size="22" fill="#DCE7F5">ATT&amp;CK Detection Coverage Matrix</text>
+<text x="36" y="116" font-family="Arial,sans-serif" font-size="14" fill="#DCE7F5">Techniques assessed: 24 | Source: reports/coverage_matrix.json</text>
+<rect x="36" y="158" width="245" height="34" rx="7" fill="#218739"/>
+<text x="48" y="180" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">Covered: 16</text>
+<rect x="306" y="158" width="245" height="34" rx="7" fill="#D99000"/>
+<text x="318" y="180" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">Partially Covered: 4</text>
+<rect x="576" y="158" width="245" height="34" rx="7" fill="#C83E4D"/>
+<text x="588" y="180" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">Not Covered: 4</text>
+<rect x="24" y="205" width="1652" height="36" rx="4" fill="#26374D"/>
+<text x="36" y="228" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">TECHNIQUE ID</text>
+<text x="160" y="228" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">TECHNIQUE</text>
+<text x="390" y="228" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">TACTIC</text>
+<text x="550" y="228" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">COVERAGE</text>
+<text x="735" y="228" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">SIGMA RULE</text>
+<text x="1080" y="228" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">TELEMETRY / EVIDENCE</text>
+<rect x="24" y="241" width="1652" height="36" fill="#FFFFFF"/>
+<text x="36" y="264" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1059.001</text>
+<text x="160" y="264" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">PowerShell</text>
+<text x="390" y="264" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">execution</text>
+<text x="550" y="264" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#218739">Covered</text>
+<text x="735" y="264" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">proc_powershell_obfuscated.yml</text>
+<text x="1080" y="264" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Sysmon Event ID 1; PowerShell telemetry</text>
+<rect x="24" y="277" width="1652" height="36" fill="#EAF0F6"/>
+<text x="36" y="300" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1059.003</text>
+<text x="160" y="300" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Windows Command Shell</text>
+<text x="390" y="300" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">execution</text>
+<text x="550" y="300" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#218739">Covered</text>
+<text x="735" y="300" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">proc_cmd_shell.yml</text>
+<text x="1080" y="300" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Sysmon Event ID 1</text>
+<rect x="24" y="313" width="1652" height="36" fill="#FFFFFF"/>
+<text x="36" y="336" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1003.001</text>
+<text x="160" y="336" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">LSASS Memory</text>
+<text x="390" y="336" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">credential-access</text>
+<text x="550" y="336" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#218739">Covered</text>
+<text x="735" y="336" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">lsass_memory_access.yml</text>
+<text x="1080" y="336" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Sysmon Event ID 10</text>
+<rect x="24" y="349" width="1652" height="36" fill="#EAF0F6"/>
+<text x="36" y="372" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1110.001</text>
+<text x="160" y="372" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Password Guessing</text>
+<text x="390" y="372" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">credential-access</text>
+<text x="550" y="372" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#D99000">Partially Covered</text>
+<text x="735" y="372" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">base_failed_logon.yml</text>
+<text x="1080" y="372" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Security Event ID 4625; only one failed-logon event observed</text>
+<rect x="24" y="385" width="1652" height="36" fill="#FFFFFF"/>
+<text x="36" y="408" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1078</text>
+<text x="160" y="408" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Valid Accounts</text>
+<text x="390" y="408" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">defense-evasion</text>
+<text x="550" y="408" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#218739">Covered</text>
+<text x="735" y="408" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">valid_accounts_admin_logon.yml</text>
+<text x="1080" y="408" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Security Event ID 4624</text>
+<rect x="24" y="421" width="1652" height="36" fill="#EAF0F6"/>
+<text x="36" y="444" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1547.001</text>
+<text x="160" y="444" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Registry Run Keys / Startu…</text>
+<text x="390" y="444" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">persistence</text>
+<text x="550" y="444" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#218739">Covered</text>
+<text x="735" y="444" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">registry_run_keys.yml</text>
+<text x="1080" y="444" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Sysmon Event ID 12/13</text>
+<rect x="24" y="457" width="1652" height="36" fill="#FFFFFF"/>
+<text x="36" y="480" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1543.003</text>
+<text x="160" y="480" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Windows Service</text>
+<text x="390" y="480" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">persistence</text>
+<text x="550" y="480" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#218739">Covered</text>
+<text x="735" y="480" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">service_creation.yml</text>
+<text x="1080" y="480" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Service creation telemetry; validate exact event source</text>
+<rect x="24" y="493" width="1652" height="36" fill="#EAF0F6"/>
+<text x="36" y="516" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1053.005</text>
+<text x="160" y="516" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Scheduled Task</text>
+<text x="390" y="516" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">persistence</text>
+<text x="550" y="516" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#218739">Covered</text>
+<text x="735" y="516" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">scheduled_task_creation.yml</text>
+<text x="1080" y="516" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Security Event ID 4698/4702</text>
+<rect x="24" y="529" width="1652" height="36" fill="#FFFFFF"/>
+<text x="36" y="552" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1087</text>
+<text x="160" y="552" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Account Discovery</text>
+<text x="390" y="552" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">discovery</text>
+<text x="550" y="552" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#218739">Covered</text>
+<text x="735" y="552" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">account_discovery.yml</text>
+<text x="1080" y="552" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Sysmon Event ID 1</text>
+<rect x="24" y="565" width="1652" height="36" fill="#EAF0F6"/>
+<text x="36" y="588" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1082</text>
+<text x="160" y="588" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">System Information Discove…</text>
+<text x="390" y="588" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">discovery</text>
+<text x="550" y="588" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#218739">Covered</text>
+<text x="735" y="588" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">system_information_discovery.yml</text>
+<text x="1080" y="588" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Sysmon Event ID 1</text>
+<rect x="24" y="601" width="1652" height="36" fill="#FFFFFF"/>
+<text x="36" y="624" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1021.001</text>
+<text x="160" y="624" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Remote Services: RDP</text>
+<text x="390" y="624" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">lateral-movement</text>
+<text x="550" y="624" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#218739">Covered</text>
+<text x="735" y="624" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">rdp_remote_service.yml</text>
+<text x="1080" y="624" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Terminal Services Event ID 1149</text>
+<rect x="24" y="637" width="1652" height="36" fill="#EAF0F6"/>
+<text x="36" y="660" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1021.002</text>
+<text x="160" y="660" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">SMB/Windows Admin Shares</text>
+<text x="390" y="660" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">lateral-movement</text>
+<text x="550" y="660" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#218739">Covered</text>
+<text x="735" y="660" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">smb_admin_share.yml</text>
+<text x="1080" y="660" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Security Event ID 5145</text>
+<rect x="24" y="673" width="1652" height="36" fill="#FFFFFF"/>
+<text x="36" y="696" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1055</text>
+<text x="160" y="696" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Process Injection</text>
+<text x="390" y="696" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">defense-evasion</text>
+<text x="550" y="696" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#218739">Covered</text>
+<text x="735" y="696" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">process_injection.yml</text>
+<text x="1080" y="696" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Sysmon Event ID 8</text>
+<rect x="24" y="709" width="1652" height="36" fill="#EAF0F6"/>
+<text x="36" y="732" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1112</text>
+<text x="160" y="732" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Modify Registry</text>
+<text x="390" y="732" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">defense-evasion</text>
+<text x="550" y="732" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#218739">Covered</text>
+<text x="735" y="732" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">modify_registry_portproxy.yml</text>
+<text x="1080" y="732" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Sysmon Event ID 12/13</text>
+<rect x="24" y="745" width="1652" height="36" fill="#FFFFFF"/>
+<text x="36" y="768" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1027</text>
+<text x="160" y="768" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Obfuscated/Compressed File…</text>
+<text x="390" y="768" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">defense-evasion</text>
+<text x="550" y="768" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#D99000">Partially Covered</text>
+<text x="735" y="768" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">—</text>
+<text x="1080" y="768" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Supporting telemetry; no dedicated validated rule</text>
+<rect x="24" y="781" width="1652" height="36" fill="#EAF0F6"/>
+<text x="36" y="804" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1070.004</text>
+<text x="160" y="804" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">File Deletion</text>
+<text x="390" y="804" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">defense-evasion</text>
+<text x="550" y="804" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#218739">Covered</text>
+<text x="735" y="804" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">file_deletion.yml</text>
+<text x="1080" y="804" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Sysmon Event ID 23</text>
+<rect x="24" y="817" width="1652" height="36" fill="#FFFFFF"/>
+<text x="36" y="840" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1070.001</text>
+<text x="160" y="840" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Clear Windows Event Logs</text>
+<text x="390" y="840" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">defense-evasion</text>
+<text x="550" y="840" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#D99000">Partially Covered</text>
+<text x="735" y="840" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">—</text>
+<text x="1080" y="840" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Event ID 1102 discussed in mapping; dedicated rule not listed</text>
+<rect x="24" y="853" width="1652" height="36" fill="#EAF0F6"/>
+<text x="36" y="876" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1105</text>
+<text x="160" y="876" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Ingress Tool Transfer</text>
+<text x="390" y="876" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">command-and-control</text>
+<text x="550" y="876" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#218739">Covered</text>
+<text x="735" y="876" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">bits_ingress_tool_transfer.yml</text>
+<text x="1080" y="876" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Sysmon/process telemetry</text>
+<rect x="24" y="889" width="1652" height="36" fill="#FFFFFF"/>
+<text x="36" y="912" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1071.001</text>
+<text x="160" y="912" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Web Protocols</text>
+<text x="390" y="912" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">command-and-control</text>
+<text x="550" y="912" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#218739">Covered</text>
+<text x="735" y="912" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">web_protocol_activity.yml</text>
+<text x="1080" y="912" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Sysmon Event ID 1</text>
+<rect x="24" y="925" width="1652" height="36" fill="#EAF0F6"/>
+<text x="36" y="948" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1005</text>
+<text x="160" y="948" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Data from Local System</text>
+<text x="390" y="948" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">collection</text>
+<text x="550" y="948" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#D99000">Partially Covered</text>
+<text x="735" y="948" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">—</text>
+<text x="1080" y="948" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Process telemetry exists; malicious collection intent not established</text>
+<rect x="24" y="961" width="1652" height="36" fill="#FFFFFF"/>
+<text x="36" y="984" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1048</text>
+<text x="160" y="984" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Exfiltration Over Alternat…</text>
+<text x="390" y="984" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">exfiltration</text>
+<text x="550" y="984" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#C83E4D">Not Covered</text>
+<text x="735" y="984" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">—</text>
+<text x="1080" y="984" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Insufficient confirmed evidence</text>
+<rect x="24" y="997" width="1652" height="36" fill="#EAF0F6"/>
+<text x="36" y="1020" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1562.001</text>
+<text x="160" y="1020" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Impair Defenses: Disable o…</text>
+<text x="390" y="1020" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">defense-evasion</text>
+<text x="550" y="1020" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#C83E4D">Not Covered</text>
+<text x="735" y="1020" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">—</text>
+<text x="1080" y="1020" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Insufficient confirmed evidence</text>
+<rect x="24" y="1033" width="1652" height="36" fill="#FFFFFF"/>
+<text x="36" y="1056" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1486</text>
+<text x="160" y="1056" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Data Encrypted for Impact</text>
+<text x="390" y="1056" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">impact</text>
+<text x="550" y="1056" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#C83E4D">Not Covered</text>
+<text x="735" y="1056" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">—</text>
+<text x="1080" y="1056" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Insufficient confirmed ransomware-encryption evidence</text>
+<rect x="24" y="1069" width="1652" height="36" fill="#EAF0F6"/>
+<text x="36" y="1092" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1F2937">T1490</text>
+<text x="160" y="1092" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">Inhibit System Recovery</text>
+<text x="390" y="1092" font-family="Arial,sans-serif" font-size="13" font-weight="normal" fill="#1F2937">impact</text>
+<text x="550" y="1092" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#C83E4D">Not Covered</text>
+<text x="735" y="1092" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">—</text>
+<text x="1080" y="1092" font-family="Arial,sans-serif" font-size="12" font-weight="normal" fill="#1F2937">Insufficient confirmed evidence</text>
+<text x="30" y="1138" font-family="Arial,sans-serif" font-size="11" fill="#536174">Project-defined coverage statuses. A detection match alone does not prove malicious activity.</text>
+</svg>

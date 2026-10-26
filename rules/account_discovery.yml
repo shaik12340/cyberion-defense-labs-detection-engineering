@@ -1,0 +1,21 @@
+title: Windows Account Discovery
+id: 12121212-1212-4121-8121-121212121212
+status: experimental
+description: Detects execution of whoami for Windows account discovery.
+references:
+  - https://attack.mitre.org/techniques/T1087/
+tags:
+  - attack.discovery
+  - attack.t1087
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection:
+    EventID: 1
+    Image|endswith: '\whoami.exe'
+  condition: selection
+falsepositives:
+  - Legitimate administrative account discovery
+  - System inventory scripts
+level: low

@@ -1,0 +1,5 @@
+Flask>=3.1,<4
+PyYAML>=6.0,<7
+Werkzeug>=3.1,<4
+python-evtx>=0.8,<1
+fastapi>=0.141,<1

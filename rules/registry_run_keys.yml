@@ -1,0 +1,24 @@
+title: Registry Run Key Modification
+id: 55555555-5555-4555-8555-555555555555
+status: experimental
+description: Detects modifications to Registry Run and RunOnce keys.
+references:
+  - https://attack.mitre.org/techniques/T1547/001/
+tags:
+  - attack.persistence
+  - attack.t1547.001
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID:
+      - 12
+      - 13
+    TargetObject|contains:
+      - '\CurrentVersion\Run'
+      - '\CurrentVersion\RunOnce'
+  condition: selection
+falsepositives:
+  - Legitimate software installation
+level: high
