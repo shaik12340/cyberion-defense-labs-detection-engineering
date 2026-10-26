@@ -24,3 +24,7 @@ data/raw/EVTX-ATTACK-SAMPLES/
 # Temporary and operating-system files
 *.tmp
 .DS_Store
+
+# Local test fixtures
+test_uploads/cdl_import_success_test.yml
+test_uploads/cdl_test_rule.yml
